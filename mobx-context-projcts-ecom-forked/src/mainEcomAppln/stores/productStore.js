@@ -15,8 +15,6 @@ export class ProductStore {
 
   
   constructor(productApi,singleProductApi,allCategories) {
-    console.log(singleProductApi,"5")
-    console.log(productApi,"6")
     makeAutoObservable(this);
     this.productApiwithLimit = productApi;
     this.singleProductApis = singleProductApi;

@@ -9,7 +9,7 @@ const categeries = () => {
   const productContext = useContext(ProductContext);
   console.log(productContext.ProductStoreContext);
   // console.log(toJS(productContext.ProductStoreContext.categeries),"ppp");
-  console.log(toJS(productContext.ProductStoreContext.singleCategoryStore),"ppp");
+  // console.log(toJS(productContext.ProductStoreContext.singleCategoryStore),"ppp");
   return (
     <div>
       categeries
@@ -24,10 +24,10 @@ const categeries = () => {
       </Grid>
 
       <Grid container>
-        {productContext.ProductStoreContext.singleCategoryStore.map((item)=>(
+        {productContext.ProductStoreContext.singleCategoryStore?.map((item)=>(
           <>
             <Grid item xs={12} sm={6} md={5} lg={3} >
-            <RecipeReviewCard key={item.id} {...item} />;
+            <RecipeReviewCard key={item.id} product={item} />;
             </Grid>
           </>
         ))}
